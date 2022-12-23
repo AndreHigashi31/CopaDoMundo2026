@@ -16,20 +16,24 @@ Destino rumoACopa = new Destino();
 Console.WriteLine("Em qual cidade você gostaria de assistir um jogo da Copa? ");
 rumoACopa.destinoViagem =  Console.ReadLine();
 
+
 Console.WriteLine($"Quantos dias pretende ficar em {rumoACopa.destinoViagem} acompanhando os jogos da Copa do Mundo? ");
 int dias = Int32.Parse(Console.ReadLine());
 rumoACopa.diasViajando = dias;
 
+Gastos.GastosBasicos(rumoACopa.destinoViagem, rumoACopa.diasViajando, rumoACopa.passagem, rumoACopa.hospedagem);
+
 Console.WriteLine("Você pretende viajar sozinho? Digite (S/N)");
 rumoACopa.acompanhantes = (Console.ReadLine());
-if(rumoACopa.acompanhantes  == "s")
+if(rumoACopa.acompanhantes  == "n")
 {
     Console.WriteLine("Quantas pessoas vão viajar com você?");
     int pessoasAdicionais = Int32.Parse(Console.ReadLine());
     rumoACopa.quantidadeDeAcompanhantes = pessoasAdicionais;
 }
 Console.WriteLine($"Quais jogos você quer assister em {rumoACopa.destinoViagem}?");
-Console.WriteLine(" - Abertura: \r\n - Fase de Grupos; \r\n - Oitavas de Final; \r\n - Quartas de Final; \r\n - Semi Final; \r\n  - FINAL!");
+Console.WriteLine(" [1] - Abertura: \r\n [2] - Fase de Grupos; \r\n [3] - Oitavas de Final; \r\n [4] - Quartas de Final; \r\n [5] - Semi Final; \r\n [6] - FINAL!");
 rumoACopa.tipoIngresso = Console.ReadLine();
+
 
 
