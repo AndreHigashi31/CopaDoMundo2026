@@ -21,8 +21,6 @@ Console.WriteLine($"Quantos dias pretende ficar em {rumoACopa.destinoViagem} aco
 int dias = Int32.Parse(Console.ReadLine());
 rumoACopa.diasViajando = dias;
 
-Gastos.GastosBasicos(rumoACopa.destinoViagem, rumoACopa.diasViajando, rumoACopa.passagem, rumoACopa.hospedagem);
-
 Console.WriteLine("Você pretende viajar sozinho? Digite (S/N)");
 rumoACopa.acompanhantes = (Console.ReadLine());
 if(rumoACopa.acompanhantes  == "n")
